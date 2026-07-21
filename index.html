@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lu Fiorentino — Cerâmica autoral feita à mão</title>
+<meta name="description" content="Peças de cerâmica únicas, modeladas à mão por Lu Fiorentino. Encomende uma peça personalizada e receba uma obra feita especialmente para você.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header" id="topo">
+  <div class="wrap header-inner">
+    <a href="#topo" class="logo">Lu<span>Fiorentino</span></a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#historia">História</a>
+      <a href="#vitrine">Vitrine</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#contato" class="nav-cta">Encomendar</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="hero">
+    <div class="hero-ring" aria-hidden="true">
+      <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="300" cy="300" r="290" />
+        <circle cx="300" cy="300" r="250" />
+        <circle cx="300" cy="300" r="212" />
+        <circle cx="300" cy="300" r="176" />
+        <circle cx="300" cy="300" r="142" />
+      </svg>
+    </div>
+
+    <div class="wrap hero-inner">
+      <p class="eyebrow reveal">Possibilidades infinitas · Feito à mão</p>
+      <h1 class="reveal">Cada peça nasce<br>uma única vez.</h1>
+      <p class="hero-sub reveal">
+        Cerâmica autoral modelada à mão, respeitando o tempo da terra e do fogo. 
+        Aqui, as possibilidades são infinitas: cada encomenda é projetada e 
+        esculpida especialmente para quem vai recebê-la, tornando-se uma obra exclusiva.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#contato" class="btn btn-fire" id="heroCta">Fazer minha encomenda</a>
+        <a href="#historia" class="btn btn-ghost">Conhecer o ateliê ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section historia" id="historia">
+    <div class="wrap historia-grid">
+      <div class="historia-visual reveal" aria-hidden="true">
+        <div class="photo-frame">
+          <svg viewBox="0 0 400 500" class="placeholder-art">
+            <rect width="400" height="500" fill="var(--color-clay-deep)"/>
+            <ellipse cx="200" cy="330" rx="95" ry="30" fill="var(--color-glaze)" opacity="0.18"/>
+            <path d="M130 330 C130 220 140 150 200 150 C260 150 270 220 270 330 C270 380 130 380 130 330 Z" fill="var(--color-glaze)"/>
+            <ellipse cx="200" cy="150" rx="70" ry="16" fill="var(--color-glaze-dark)"/>
+          </svg>
+          <span class="photo-tag">O Processo Artesanal</span>
+        </div>
+      </div>
+
+      <div class="historia-text">
+        <p class="eyebrow reveal">A história</p>
+        <h2 class="reveal">A paixão pela cerâmica<br>e o valor do feito à mão</h2>
+        <p class="reveal">
+          O trabalho com a argila nasceu do desejo profundo de desacelerar e criar conexões reais. 
+          No torno ou na modelagem manual, cada movimento exige presença. O ofício da cerâmica 
+          é um diálogo entre a técnica e a paciência, resultando em objetos que carregam afeto, 
+          história e dedicação em cada detalhe.
+        </p>
+        <p class="reveal">
+          No ateliê de Lu Fiorentino, o foco está em traduzir sentimentos em formas utilitárias e decorativas. 
+          As variações sutis nos esmaltes, as marcas sutis dos dedos e os efeitos imprevisíveis das altas 
+          temperaturas do forno não são falhas; são a assinatura de que a peça é viva e verdadeiramente única. 
+          Um detalhe autêntico feito para fazer parte do seu dia a dia.
+        </p>
+        <a href="#contato" class="link-underline">Encomendar uma peça personalizada →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 Q 300 0 600 20 T 1200 20"/></svg>
+  </div>
+
+  <section class="section vitrine" id="vitrine">
+    <div class="wrap">
+      <p class="eyebrow reveal">O estilo</p>
+      <h2 class="reveal">Uma vitrine de inspirações</h2>
+      <p class="vitrine-sub reveal">
+        Explore nosso estilo de modelagem, esmaltação e acabamento. Estas peças servem de 
+        ponto de partida para inspirar sua imaginação — lembrando que criamos designs sob medida 
+        de acordo com a sua necessidade.
+      </p>
+
+      <div class="filters reveal" role="tablist" aria-label="Filtrar vitrine por categoria">
+        <button class="filter-btn is-active" data-filter="todas">Todas</button>
+        <button class="filter-btn" data-filter="vasos">Vasos</button>
+        <button class="filter-btn" data-filter="tigelas">Tigelas</button>
+        <button class="filter-btn" data-filter="xicaras">Xícaras</button>
+        <button class="filter-btn" data-filter="decor">Decorativos</button>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <button class="piece reveal" data-cat="vasos" data-name="Vaso Terra" data-desc="Modelagem orgânica, esmalte fosco terroso com acabamento texturizado.">
+          <svg viewBox="0 0 300 340" class="piece-art">
+            <path d="M90 60 C90 40 210 40 210 60 C230 120 240 200 200 300 C180 330 120 330 100 300 C60 200 70 120 90 60 Z" fill="var(--color-glaze)"/>
+            <ellipse cx="150" cy="60" rx="60" ry="14" fill="var(--color-glaze-dark)"/>
+          </svg>
+          <span class="piece-label">Vaso Terra <em>vasos</em></span>
+        </button>
+
+        <button class="piece reveal" data-cat="tigelas" data-name="Tigela Maré" data-desc="Bordas fluidas e esmalte azul-esverdeado com nuances de óxido.">
+          <svg viewBox="0 0 300 340" class="piece-art">
+            <path d="M60 180 C60 140 240 140 240 180 C250 230 210 260 150 260 C90 260 50 230 60 180 Z" fill="var(--color-fire)"/>
+            <ellipse cx="150" cy="180" rx="90" ry="20" fill="var(--color-fire-dark)" opacity="0.5"/>
+          </svg>
+          <span class="piece-label">Tigela Maré <em>tigelas</em></span>
+        </button>
+
+        <button class="piece reveal" data-cat="xicaras" data-name="Xícara Bruma" data-desc="Corpo minimalista com alça ergonômica, esmalte acetinado claro.">
+          <svg viewBox="0 0 300 340" class="piece-art">
+            <rect x="100" y="100" width="110" height="150" rx="18" fill="var(--color-clay-deep)"/>
+            <path d="M210 130 C250 130 250 200 210 200" fill="none" stroke="var(--color-clay-deep)" stroke-width="14"/>
+          </svg>
+          <span class="piece-label">Xícara Bruma <em>xicaras</em></span>
+        </button>
+
+        <button class="piece reveal" data-cat="decor" data-name="Escultura Raiz" data-desc="Objeto decorativo escultural, celebrando linhas naturais e rústicas.">
+          <svg viewBox="0 0 300 340" class="piece-art">
+            <path d="M150 300 C120 260 100 220 130 180 C90 170 90 120 130 100 C120 70 160 50 180 80 C210 70 230 110 200 140 C230 170 210 220 170 220 C190 260 180 290 150 300 Z" fill="var(--color-ink-soft)"/>
+          </svg>
+          <span class="piece-label">Escultura Raiz <em>decor</em></span>
+        </button>
+
+        <button class="piece reveal" data-cat="vasos" data-name="Vaso Duna" data-desc="Silhueta larga e baixa com contraste elegante entre a argila nua e o esmalte.">
+          <svg viewBox="0 0 300 340" class="piece-art">
+            <path d="M70 220 C70 180 230 180 230 220 C240 250 200 270 150 270 C100 270 60 250 70 220 Z" fill="var(--color-glaze-dark)"/>
+            <ellipse cx="150" cy="180" rx="80" ry="16" fill="var(--color-glaze)"/>
+          </svg>
+          <span class="piece-label">Vaso Duna <em>vasos</em></span>
+        </button>
+
+        <button class="piece reveal" data-cat="tigelas" data-name="Tigela Cinza" data-desc="Esmalte cinza profundo com acabamento interno suave.">
+          <svg viewBox="0 0 300 340" class="piece-art">
+            <path d="M55 170 C55 130 245 130 245 170 C255 225 205 258 150 258 C95 258 45 225 55 170 Z" fill="var(--color-ink-soft)"/>
+            <ellipse cx="150" cy="170" rx="95" ry="22" fill="var(--color-clay-deep)"/>
+          </svg>
+          <span class="piece-label">Tigela Cinza <em>tigelas</em></span>
+        </button>
+      </div>
+
+      <p class="vitrine-note reveal">Procura algo específico para seu espaço ou evento? O canal de encomendas personalizadas está pronto para criar seu projeto.</p>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 Q 300 40 600 20 T 1200 20"/></svg>
+  </div>
+
+  <section class="section como-funciona" id="como-funciona">
+    <div class="wrap">
+      <p class="eyebrow reveal">Processo</p>
+      <h2 class="reveal">Como encomendar sua peça</h2>
+
+      <div class="steps">
+        <div class="step reveal">
+          <span class="step-num">01</span>
+          <h3>Você traz a sua ideia</h3>
+          <p>Você compartilha suas necessidades, inspirações, dimensões ou paletas de cores pretendidas. Pode trazer referências visuais ou apenas a intenção do uso no dia a dia.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">02</span>
+          <h3>Nós definimos o design e eu modelo a peça</h3>
+          <p>Alinhamos os acabamentos e dou início à produção manual no ateliê. A peça toma forma passo a passo através das mãos, da secagem adequada e das queimas necessárias.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">03</span>
+          <h3>Você recebe uma obra única</h3>
+          <p>Sua cerâmica exclusiva é embalada de forma altamente segura e enviada direto para a sua casa. Uma obra única pronta para compor a identidade do seu espaço.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final" id="contato">
+    <div class="wrap cta-inner">
+      <p class="eyebrow reveal">Contato</p>
+      <h2 class="reveal">Ideias infinitas ganham forma aqui</h2>
+      <p class="reveal">Fale diretamente comigo pelo WhatsApp para iniciarmos o desenho e planejamento da sua cerâmica sob medida.</p>
+      <a href="#" class="btn btn-fire btn-lg reveal" id="ctaFinalBtn">Faça sua Encomenda Personalizada</a>
+    </div>
+  </section>
+
+</main>
+
+<section class="section-instagram reveal" style="text-align: center; padding: 60px 0; background: var(--color-paper); border-top: 1px solid var(--color-line);">
+  <div class="wrap">
+    <p class="eyebrow" style="margin-bottom: 8px;">Bastidores do Ateliê</p>
+    <h3 style="font-family: var(--font-display); font-size: 24px; margin-bottom: 16px;">Acompanhe os processos de queima e modelagem</h3>
+    <a href="https://instagram.com/lu.fiorentino.seu.user" target="_blank" rel="noopener" class="link-underline" style="font-size: 16px;">Siga @lu.fiorentino no Instagram →</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="logo footer-logo">Lu<span>Fiorentino</span></p>
+      <p class="footer-desc">Cerâmica autoral, feita à mão, peça por peça.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#historia">História</a>
+      <a href="#vitrine">Vitrine</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#" id="footerWhats">WhatsApp</a>
+      <a href="https://instagram.com/seu.usuario" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <p class="footer-copy">© <span id="ano"></span> Lu Fiorentino — todos os direitos reservados.</p>
+</footer>
+
+<a href="#" class="whats-float" id="whatsFloat" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true">
+    <path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.6.7 5 1.9 7.1L3 29l6.4-2.1c2 1.1 4.3 1.7 6.6 1.7 7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3zm0 23.1c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-3.8 1.2 1.3-3.7-.3-.4a10.9 10.9 0 0 1-1.8-6c0-6 4.9-10.9 10.9-10.9 2.9 0 5.6 1.1 7.7 3.2a10.8 10.8 0 0 1 3.2 7.7c0 6-4.9 10.7-10.9 10.7z"/>
+    <path d="M21.6 18.4c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.3 4.6 3.1 1.2 3.1.8 3.7.8.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5z"/>
+  </svg>
+</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>
