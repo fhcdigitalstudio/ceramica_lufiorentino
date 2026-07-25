@@ -8,7 +8,7 @@
 
 <!--
   ANTES DE PUBLICAR:
-  1. Troque o WHATSAPP_NUMERO em js/script.js
+  1. Troque o WHATSAPP_NUMERO em js/script.js (se precisar)
   2. Troque as caixas coloridas (placeholders) por fotos reais: procure "TROCAR POR FOTO"
   3. Troque o @ do Instagram (2x: seção Bastidores e rodapé)
   4. Troque os 3 depoimentos de exemplo pelos reais
@@ -41,25 +41,12 @@
 
 <main>
 
+  <!-- HERO: agora é a sua arte (images/hero.png). O botão "CONHEÇA A COLEÇÃO"
+       que já está desenhado na imagem vira clicável de verdade através do
+       link invisível .hero-cta-overlay, posicionado por cima dele. -->
   <section class="hero" id="hero">
-    <!-- decoração: arcos coloridos sólidos, com espaço creme entre eles -->
-    <div class="hero-arcos" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
-
-    <div class="wrap hero-inner">
-      <p class="eyebrow reveal">Possibilidades infinitas · Feito à mão</p>
-      <h1 class="reveal">Cada peça nasce<br>uma única vez.</h1>
-      <p class="hero-sub reveal">
-        Cerâmica autoral modelada à mão, respeitando o tempo da terra e do fogo.
-        Aqui, as possibilidades são infinitas: cada encomenda é projetada e
-        esculpida especialmente para quem vai recebê-la, tornando-se uma obra exclusiva.
-      </p>
-      <div class="hero-actions reveal">
-        <a href="#contato" class="btn btn-fire" id="heroCta">Fazer minha encomenda</a>
-        <a href="#historia" class="btn btn-ghost">Conhecer o ateliê ↓</a>
-      </div>
-    </div>
+    <img src="images/hero.png" alt="Lu Fiorentino — cada peça nasce uma única vez. Peças únicas, feitas com cuidado e inspiração na natureza." class="hero-img">
+    <a href="#vitrine" class="hero-cta-overlay" aria-label="Conheça a coleção"></a>
   </section>
 
   <section class="section historia" id="historia">
@@ -236,7 +223,7 @@
   <div class="wrap">
     <p class="eyebrow">Bastidores do Ateliê</p>
     <h3>Acompanhe os processos de queima e modelagem</h3>
-    <a href="https://instagram.com/lu.fiorentino" target="_blank" rel="noopener" class="link-underline">Siga @lu.fiorentino no Instagram →</a>
+    <a href="https://instagram.com/ceramica_lufiorentino" target="_blank" rel="noopener" class="link-underline">Siga @ceramica_lufiorentino no Instagram →</a>
   </div>
 </section>
 
@@ -251,13 +238,21 @@
       <a href="#vitrine">Vitrine</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#" id="footerWhats">WhatsApp</a>
-      <a href="https://instagram.com/lu.fiorentino" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://instagram.com/ceramica_lufiorentino" target="_blank" rel="noopener">Instagram</a>
     </div>
   </div>
   <p class="footer-copy">© <span id="ano"></span> Lu Fiorentino — todos os direitos reservados.</p>
+  <!-- TROCAR: coloque seu nome/link real aqui -->
+  <p class="footer-credits">Desenvolvido por <a href="https://www.linkedin.com/in/fernando-lembo" target="_blank" rel="noopener">Fernando Lembo</a></p>
 </footer>
 
-<a href="#" class="whats-float" id="whatsFloat" aria-label="Falar no WhatsApp">💬</a>
+<!-- ícone real do WhatsApp (SVG), não é mais o emoji -->
+<a href="#" class="whats-float" id="whatsFloat" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true">
+    <path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.6.7 5 1.9 7.1L3 29l6.4-2.1c2 1.1 4.3 1.7 6.6 1.7 7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3zm0 23.1c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-3.8 1.2 1.3-3.7-.3-.4a10.9 10.9 0 0 1-1.8-6c0-6 4.9-10.9 10.9-10.9 2.9 0 5.6 1.1 7.7 3.2a10.8 10.8 0 0 1 3.2 7.7c0 6-4.9 10.7-10.9 10.7z"/>
+    <path d="M21.6 18.4c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.3 4.6 3.1 1.2 3.1.8 3.7.8.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5z"/>
+  </svg>
+</a>
 
 <script src="js/script.js"></script>
 </body>

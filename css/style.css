@@ -4,16 +4,16 @@
    ===================================================== */
 
 :root{
-  --color-clay:        #E4DDCD;
-  --color-clay-deep:   #D6C8AC;
-  --color-paper:       #F7F2E7;
-  --color-ink:         #2B2620;
-  --color-ink-soft:    #5B5344;
-  --color-glaze:       #4F5D42;
-  --color-glaze-dark:  #38442F;
-  --color-fire:        #A8461F;
-  --color-fire-dark:   #82370F;
-  --color-line:        #C7BBA0;
+  --color-clay:        #D9C3A3;
+  --color-clay-deep:   #DCC7A8;
+  --color-paper:       #F8F1E4;
+  --color-ink:         #3B2A1E;
+  --color-ink-soft:    #6B4F3A;
+  --color-glaze:       #8B5A3C;
+  --color-glaze-dark:  #6B4229;
+  --color-fire:        #B5652D;
+  --color-fire-dark:   #8F4A1F;
+  --color-line:        #CBB393;
 
   --font-display: 'Fraunces', serif;
   --font-body: 'Work Sans', sans-serif;
@@ -28,7 +28,7 @@
 html{ scroll-behavior: smooth; }
 body{
   margin: 0;
-  background: var(--color-clay);
+  background-color: var(--color-clay);
   color: var(--color-ink);
   font-family: var(--font-body);
   font-size: 17px;
@@ -101,35 +101,19 @@ a:focus-visible, button:focus-visible{
 .btn-ghost:hover{ background: var(--color-ink); color: var(--color-clay); }
 .btn-lg{ padding: 18px 34px; font-size: 17px; }
 
-.hero-actions{ display: flex; flex-wrap: wrap; gap: 16px; }
+/* ---------- hero: sua arte (images/hero.png) ---------- */
+.hero{ position: relative; }
+.hero-img{ width: 100%; height: auto; }
 
-/* ---------- hero ---------- */
-.hero{ position: relative; overflow: hidden; padding: 120px 0 140px; }
-
-/* arcos decorativos: faixas coloridas sólidas, com um "respiro" na cor
-   do fundo entre elas — dá o efeito de arco bem marcado */
-.hero-arcos{
-  position: absolute; right: -200px; top: 50%;
-  width: 600px; height: 600px; transform: translateY(-50%);
-  pointer-events: none;
+/* link invisível por cima do botão "CONHEÇA A COLEÇÃO" que já está
+   desenhado na sua arte — clicar aqui rola até a seção da vitrine.
+   Se a imagem for trocada e o botão mudar de lugar, ajuste os
+   valores de left/top/width/height abaixo. */
+.hero-cta-overlay{
+  position: absolute;
+  left: 5%; top: 73%;
+  width: 24%; height: 8%;
 }
-.hero-arcos span{
-  position: absolute; top: 50%; left: 50%;
-  border-radius: 50%; transform: translate(-50%, -50%);
-}
-.hero-arcos span:nth-child(1){ width: 600px; height: 600px; background: var(--color-fire); }
-.hero-arcos span:nth-child(2){ width: 500px; height: 500px; background: var(--color-clay); }
-.hero-arcos span:nth-child(3){ width: 400px; height: 400px; background: var(--color-glaze); }
-.hero-arcos span:nth-child(4){ width: 300px; height: 300px; background: var(--color-clay); }
-.hero-arcos span:nth-child(5){ width: 200px; height: 200px; background: var(--color-fire-dark); }
-@media (prefers-reduced-motion: no-preference){
-  .hero-arcos{ animation: spin 90s linear infinite; }
-}
-@keyframes spin{ to{ transform: translateY(-50%) rotate(360deg); } }
-
-.hero-inner{ max-width: 620px; position: relative; z-index: 1; }
-.hero h1{ font-size: clamp(42px, 6vw, 68px); }
-.hero-sub{ font-size: 18px; max-width: 480px; }
 
 /* ---------- seções (título + espaçamento padrão) ---------- */
 .section{ padding: 100px 0; }
@@ -154,7 +138,6 @@ a:focus-visible, button:focus-visible{
 }
 .link-underline{ font-weight: 600; color: var(--color-glaze); border-bottom: 1px solid currentColor; padding-bottom: 2px; }
 .link-underline:hover{ color: var(--color-fire); }
-
 
 /* ---------- vitrine ---------- */
 .vitrine-sub{ max-width: 560px; font-size: 19px; }
@@ -228,12 +211,15 @@ a:focus-visible, button:focus-visible{
 .section-instagram .eyebrow{ margin-bottom: 8px; }
 
 /* ---------- footer ---------- */
-.site-footer{ background: var(--color-clay-deep); padding: 60px 0 20px; }
-.footer-inner{ display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--color-line); }
+.site-footer{ background: var(--color-clay-deep); padding: 36px 0 16px; }
+.footer-inner{ display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--color-line); }
 .footer-desc{ color: var(--color-ink-soft); max-width: 260px; }
 .footer-links{ display: flex; gap: 26px; flex-wrap: wrap; }
 .footer-links a:hover{ color: var(--color-glaze); }
-.footer-copy{ text-align: center; font-size: 13px; color: var(--color-ink-soft); padding-top: 18px; margin: 0; }
+.footer-copy{ text-align: center; font-size: 13px; color: var(--color-ink-soft); padding-top: 14px; margin: 0; }
+.footer-credits{ text-align: center; font-size: 12px; color: var(--color-ink-soft); margin: 4px 0 0; }
+.footer-credits a{ font-weight: 600; }
+.footer-credits a:hover{ color: var(--color-glaze); }
 
 /* ---------- botão flutuante whatsapp ---------- */
 .whats-float{
@@ -241,7 +227,7 @@ a:focus-visible, button:focus-visible{
   width: 58px; height: 58px; border-radius: 50%;
   background: var(--color-glaze); color: #fff;
   display: flex; align-items: center; justify-content: center;
-  font-size: 26px; box-shadow: 0 10px 24px rgba(43,38,32,.3);
+  box-shadow: 0 10px 24px rgba(43,38,32,.3);
   transition: transform .2s ease, background .2s ease;
 }
 .whats-float:hover{ background: var(--color-glaze-dark); transform: scale(1.06); }
@@ -268,8 +254,6 @@ a:focus-visible, button:focus-visible{
   .main-nav a.nav-cta{ text-align: center; margin-top: 12px; }
   .nav-toggle{ display: flex; }
 
-  .hero{ padding: 90px 0; }
-  .hero-arcos{ opacity: .8; right: -280px; width: 460px; height: 460px; }
   .section{ padding: 72px 0; }
   .gallery{ grid-template-columns: 1fr 1fr; gap: 18px; }
   .cta-final{ padding: 80px 0; }
@@ -279,6 +263,5 @@ a:focus-visible, button:focus-visible{
   .wrap{ padding: 0 20px; }
   .gallery{ grid-template-columns: 1fr; }
   .filters{ gap: 8px; }
-  .hero h1{ font-size: 40px; }
   .footer-inner{ flex-direction: column; }
 }
