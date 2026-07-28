@@ -1,259 +1,700 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lu Fiorentino — Cerâmica autoral feita à mão</title>
-<meta name="description" content="Peças de cerâmica únicas, modeladas à mão por Lu Fiorentino. Encomende uma peça personalizada e receba uma obra feita especialmente para você.">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--
-  ANTES DE PUBLICAR:
-  1. Troque o WHATSAPP_NUMERO em js/script.js (se precisar)
-  2. Troque as caixas coloridas (placeholders) por fotos reais: procure "TROCAR POR FOTO"
-  3. Troque o @ do Instagram (2x: seção Bastidores e rodapé)
-  4. Troque os 3 depoimentos de exemplo pelos reais
-  5. Domínio, hospedagem e SSL: veja README.md
--->
+    <title>Lu Fiorentino | Cerâmica Autoral feita à mão</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Peças únicas de cerâmica autoral produzidas artesanalmente por Lu Fiorentino. Cada peça nasce uma única vez.">
+    <meta name="keywords" content="cerâmica artesanal, cerâmica autoral, peças personalizadas, ceramista, decoração">
+    <meta name="author" content="Fernando Lembo">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#D9C3A3">
+
+    <link rel="canonical" href="https://lufiorentino.com.br">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lu Fiorentino | Cerâmica Autoral">
+    <meta property="og:description" content="Cada peça nasce uma única vez. Cerâmica artesanal feita à mão.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://lufiorentino.com.br">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lu Fiorentino">
+    <meta name="twitter:description" content="Cerâmica artesanal feita à mão.">
+    <meta name="twitter:image" content="images/og-image.jpg">
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="images/hero.webp" as="image" fetchpriority="high">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+{
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Lu Fiorentino",
+    "jobTitle":"Ceramista",
+    "description":"Cerâmica autoral feita à mão.",
+    "url":"https://lufiorentino.com.br",
+    "sameAs":[
+        "https://instagram.com/ceramica_lufiorentino"
+    ]
+}
+    </script>
 </head>
+
 <body>
 
-<header class="site-header" id="topo">
-  <div class="wrap header-inner">
-    <a href="#topo" class="logo">Lu<span>Fiorentino</span></a>
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-    <nav class="main-nav" id="mainNav">
-      <a href="#historia">História</a>
-      <a href="#vitrine">Vitrine</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#contato" class="nav-cta">Encomendar</a>
-    </nav>
+<header class="site-header">
+    <div class="wrap header-inner">
 
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+        <a href="/" class="logo" aria-label="Página inicial">
+            Lu<span>Fiorentino</span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+            <a href="#historia">História</a>
+            <a href="#vitrine">Coleção</a>
+            <a href="#como-funciona">Processo</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contato" class="nav-cta">Encomendar</a>
+        </nav>
+
+        <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-expanded="false"
+            aria-controls="mainNav"
+            aria-label="Abrir menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
 </header>
 
-<main>
+<main id="conteudo">
 
-  <!-- HERO: agora é a sua arte (images/hero.png). O botão "CONHEÇA A COLEÇÃO"
-       que já está desenhado na imagem vira clicável de verdade através do
-       link invisível .hero-cta-overlay, posicionado por cima dele. -->
-  <section class="hero" id="hero">
-    <img src="images/hero.png" alt="Lu Fiorentino — cada peça nasce uma única vez. Peças únicas, feitas com cuidado e inspiração na natureza." class="hero-img">
-    <a href="#vitrine" class="hero-cta-overlay" aria-label="Conheça a coleção"></a>
-  </section>
+<section class="hero">
 
-  <section class="section historia" id="historia">
+    <div class="wrap hero-grid">
+
+        <div class="hero-content reveal">
+
+            <p class="eyebrow">Cerâmica Autoral</p>
+
+            <h1>
+                Cada peça nasce
+                <span>uma única vez.</span>
+            </h1>
+
+            <p class="hero-text">
+                As marcas do barro, do fogo e das mãos tornam cada cerâmica impossível de reproduzir.
+                Mais do que objetos, criamos peças que carregam história, tempo e significado.
+            </p>
+
+            <div class="hero-actions">
+                <a id="heroCta" href="#vitrine" class="btn btn-fire">Conheça a coleção</a>
+                <a href="#historia" class="btn btn-ghost">Nossa história</a>
+            </div>
+
+            <ul class="hero-highlights">
+                <li>100% artesanal</li>
+                <li>Peças exclusivas</li>
+                <li>Encomendas personalizadas</li>
+            </ul>
+
+        </div>
+
+        <div class="hero-image reveal">
+            <img
+                src="images/prato2.png"
+                alt="Peças de cerâmica artesanal produzidas por Lu Fiorentino"
+                width="900"
+                height="1000"
+                fetchpriority="high">
+        </div>
+
+    </div>
+
+</section>
+<!-- ===========================================================
+HISTÓRIA
+=========================================================== -->
+
+<section class="section historia" id="historia">
+
     <div class="wrap historia-grid">
-      <div class="historia-visual reveal" aria-hidden="true">
-        <div class="photo-frame">
-          <img src="images/producao.jpg" alt="Lu Fiorentino modelando uma peça no torno">
-        </div>
-      </div>
 
-      <div class="historia-text">
-        <p class="eyebrow reveal">A história</p>
-        <h2 class="reveal">A paixão pela cerâmica<br>e o valor do feito à mão</h2>
-        <p class="reveal">
-          O trabalho com a argila nasceu do desejo profundo de desacelerar e criar conexões reais.
-          No torno ou na modelagem manual, cada movimento exige presença. O ofício da cerâmica
-          é um diálogo entre a técnica e a paciência, resultando em objetos que carregam afeto,
-          história e dedicação em cada detalhe.
+        <figure class="historia-image reveal">
+            <img
+                src="images/producao.jpg"
+                alt="Lu Fiorentino modelando uma peça de cerâmica artesanal."
+                width="700"
+                height="900"
+                loading="lazy"
+                decoding="async">
+        </figure>
+
+        <article class="historia-content">
+
+            <p class="eyebrow reveal">A História</p>
+
+            <h2 class="reveal">
+                O barro, o fogo e o tempo fazem parte de cada criação.
+            </h2>
+
+            <p class="reveal">
+                A cerâmica nasceu como um encontro entre criatividade, paciência e o desejo de produzir objetos que carregam significado. Cada peça passa por diversas etapas manuais, respeitando o tempo da argila e os processos naturais de secagem e queima.
+            </p>
+
+            <p class="reveal">
+                No ateliê de Lu Fiorentino não existem produções em massa. Cada esmaltação reage de forma diferente ao forno, cada textura guarda as marcas das mãos e cada detalhe torna aquela peça impossível de ser reproduzida exatamente igual.
+            </p>
+
+            <div class="historia-cards reveal">
+
+                <div class="info-card">
+                    <strong>100%</strong>
+                    <span>Produção artesanal</span>
+                </div>
+
+                <div class="info-card">
+                    <strong>Única</strong>
+                    <span>Cada peça possui identidade própria</span>
+                </div>
+        
+                <div class="info-card">
+                    <strong>Sob medida</strong>
+                    <span>Projetos personalizados</span>
+                </div>
+            </div>
+
+            <a href="#contato" class="btn btn-fire">
+                Quero criar minha peça
+            </a>
+        </article>
+    </div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- ===========================================================
+GALERIA
+=========================================================== -->
+
+<section class="section gallery-section" id="vitrine">
+
+    <div class="wrap">
+        <p class="eyebrow reveal">Coleção</p>
+        <h2 class="reveal">
+            Inspirações para sua próxima peça.
+        </h2>
+        <p class="gallery-description reveal">
+            Estas peças representam o estilo da Lu Fiorentino. Elas servem como inspiração para encomendas totalmente personalizadas.
         </p>
-        <p class="reveal">
-          No ateliê de Lu Fiorentino, o foco está em traduzir sentimentos em formas utilitárias e decorativas.
-          As variações sutis nos esmaltes, as marcas dos dedos e os efeitos imprevisíveis das altas
-          temperaturas do forno não são falhas; são a assinatura de que a peça é viva e verdadeiramente única.
+
+        <nav class="filters reveal" aria-label="Categorias da coleção">
+
+            <button class="filter-btn is-active" data-filter="todas">Todas</button>
+            <button class="filter-btn" data-filter="pratos">Pratos</button>
+            <button class="filter-btn" data-filter="tigelas">Tigelas</button>
+            <button class="filter-btn" data-filter="xicaras">Xícaras</button>
+            <button class="filter-btn" data-filter="decorativos">Decorativos</button>
+
+        </nav>
+
+        <div class="gallery-grid">
+            <article class="piece reveal" data-cat="tigelas" data-name="Tigela Colorida">
+                <img
+                    src="images/tigela2.jpg"
+                    alt="Tigela artesanal colorida"
+                    width="600"
+                    height="700"
+                    loading="lazy"
+                    decoding="async">
+
+                <div class="piece-content">
+                    <h3>Tigela Colorida</h3>
+                    <span>Tigelas</span>
+                </div>
+            </article>
+
+            <article class="piece reveal" data-cat="pratos" data-name="Pratos Amarelos">
+
+                <img
+                    src="images/prato1.png"
+                    alt="Pratos artesanais amarelos"
+                    width="600"
+                    height="700"
+                    loading="lazy"
+                    decoding="async">
+
+                <div class="piece-content">
+                    <h3>Pratos Amarelos</h3>
+                    <span>Pratos</span>
+                </div>
+            </article>
+
+            <article class="piece reveal" data-cat="xicaras" data-name="Xícara Azul">
+
+                <img
+                    src="images/canecas1.png"
+                    alt="Xícara artesanal azul"
+                    width="600"
+                    height="700"
+                    loading="lazy"
+                    decoding="async">
+
+                <div class="piece-content">
+                    <h3>Xícara Azul</h3>
+                    <span>Xícaras</span>
+                </div>
+
+            </article>
+            <!-- Adicione os próximos cards seguindo este padrão -->
+        </div>
+    </div>
+</section>
+
+<!-- ===========================================================
+MODAL DA GALERIA
+=========================================================== -->
+
+<dialog id="galleryModal" class="gallery-modal">
+
+    <button class="modal-close" aria-label="Fechar">×</button>
+
+    <div class="modal-grid">
+        <img id="modalImage" src="" alt="">
+        <div>
+            <p class="eyebrow">Coleção</p>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription">
+                Cada peça pode servir de inspiração para uma nova criação. Cores, formatos, dimensões e acabamentos podem ser adaptados conforme sua necessidade.
+            </p>
+            <a id="modalWhatsapp" href="#" class="btn btn-fire">
+                Quero uma semelhante
+            </a>
+        </div>
+    </div>
+</dialog>
+<!-- ===========================================================
+PROCESSO
+=========================================================== -->
+
+<section class="section process-section" id="como-funciona">
+
+    <div class="wrap">
+
+        <p class="eyebrow reveal">Processo Criativo</p>
+
+        <h2 class="reveal">Da ideia à peça final.</h2>
+
+        <p class="section-description reveal">
+            Cada encomenda percorre um processo artesanal cuidadoso,
+            respeitando o tempo da argila e garantindo um resultado
+            verdadeiramente exclusivo.
         </p>
-        <a href="#contato" class="link-underline">Encomendar uma peça personalizada →</a>
-      </div>
-    </div>
-  </section>
 
-  <div class="divider" aria-hidden="true"></div>
+        <div class="timeline">
 
-  <section class="section vitrine" id="vitrine">
-    <div class="wrap">
-      <p class="eyebrow reveal">O estilo</p>
-      <h2 class="reveal">Uma vitrine de inspirações</h2>
-      <p class="vitrine-sub reveal">
-        Explore nosso estilo de modelagem, esmaltação e acabamento. Estas peças servem de
-        ponto de partida para inspirar sua imaginação — lembrando que criamos designs sob medida
-        de acordo com a sua necessidade.
-      </p>
+            <article class="timeline-item reveal">
 
-      <div class="filters reveal" role="tablist" aria-label="Filtrar vitrine por categoria">
-        <button class="filter-btn is-active" data-filter="todas">Todas</button>
-        <button class="filter-btn" data-filter="pratos">Pratos</button>
-        <button class="filter-btn" data-filter="tigelas">Tigelas</button>
-        <button class="filter-btn" data-filter="xicaras">Xícaras</button>
-        <button class="filter-btn" data-filter="decorativos">Decorativos</button>
-      </div>
+                <div class="timeline-number">01</div>
 
-      <!-- Cada .piece é uma peça da vitrine. TROCAR POR FOTO: substitua a <div class="piece-img ..."> por <img src="..."> -->
-      <div class="gallery" id="gallery">
+                <div class="timeline-content">
+                    <h3>Conversa Inicial</h3>
+                    <p>
+                        Entendemos sua ideia, referências, cores, tamanhos e
+                        como a peça será utilizada.
+                    </p>
+                </div>
 
-        <button class="piece reveal" data-cat="tigelas" data-name="Tigela Colorida">
-          <img src="images/tigela2.jpg" alt="Tigelas coloridas servidas na mesa" class="piece-img">
-          <span class="piece-label">Tigela Colorida <em>tigelas</em></span>
-        </button>
+            </article>
 
-        <button class="piece reveal" data-cat="pratos" data-name="Pratos Amarelos">
-          <img src="images/prato1.png" alt="Pratos amarelos empilhados na mesa" class="piece-img">
-          <span class="piece-label">Pratos Amarelos <em>pratos</em></span>
-        </button>
+            <article class="timeline-item reveal">
 
-        <button class="piece reveal" data-cat="xicaras" data-name="Xícara Azul">
-          <img src="images/canecas1.png" alt="Xícaras azuis dentro de uma caixa" class="piece-img">
-          <span class="piece-label">Xícara Azul <em>xicaras</em></span>
-        </button>
+                <div class="timeline-number">02</div>
 
-        <button class="piece reveal" data-cat="tigelas" data-name="Tigelas e Pratos">
-          <img src="images/tigela1.jpg" alt="Tigelas e pratos servidos na mesa" class="piece-img">
-          <span class="piece-label">Tigelas e Pratos <em>tigelas</em></span>
-        </button>
+                <div class="timeline-content">
+                    <h3>Modelagem Manual</h3>
+                    <p>
+                        Cada detalhe é moldado manualmente,
+                        sem processos industriais.
+                    </p>
+                </div>
 
-        <button class="piece reveal" data-cat="pratos" data-name="Pratos Amarelos">
-          <img src="images/prato2.png" alt="Pratos amarelos empilhados na mesa" class="piece-img">
-          <span class="piece-label">Pratos Amarelos <em>pratos</em></span>
-        </button>
+            </article>
 
-        <button class="piece reveal" data-cat="xicaras" data-name="Xícaras Coloridas">
-          <img src="images/canecas2.png" alt="Xícaras coloridas dentro de uma caixa" class="piece-img">
-          <span class="piece-label">Xícaras Coloridas <em>xicaras</em></span>
-        </button>
+            <article class="timeline-item reveal">
 
-        <button class="piece reveal" data-cat="decorativos" data-name="Papai Noel">
-          <img src="images/natal1.png" alt="Papai Noel decorativo colorido segurando presentes" class="piece-img">
-          <span class="piece-label">Papai Noel <em>decorativos</em></span>
-        </button>
+                <div class="timeline-number">03</div>
 
-        <button class="piece reveal" data-cat="decorativos" data-name="Bota do Papai Noel">
-          <img src="images/natal2.png" alt="Bota do papai noel decorativo com ursinho e presentes dentro" class="piece-img">
-          <span class="piece-label">Bota do Papai Noel <em>decorativos</em></span>
-        </button>
+                <div class="timeline-content">
+                    <h3>Secagem Natural</h3>
+                    <p>
+                        A peça descansa pelo tempo necessário
+                        para evitar tensões e deformações.
+                    </p>
+                </div>
 
-        <button class="piece reveal" data-cat="decorativos" data-name="Vaso de Coração">
-          <img src="images/decoracao1.png" alt="Vaso pendurado com plantas dentro" class="piece-img">
-          <span class="piece-label">Vaso de Coração <em>decorativos</em></span>
-        </button>
+            </article>
 
-      </div>
+            <article class="timeline-item reveal">
 
-      <p class="vitrine-note reveal">Procura algo específico para seu espaço ou evento? O canal de encomendas personalizadas está pronto para criar seu projeto.</p>
-    </div>
-  </section>
+                <div class="timeline-number">04</div>
 
-  <div class="divider" aria-hidden="true"></div>
+                <div class="timeline-content">
+                    <h3>Primeira Queima</h3>
+                    <p>
+                        O barro ganha resistência através da primeira etapa
+                        do forno.
+                    </p>
+                </div>
 
-  <section class="section como-funciona" id="como-funciona">
-    <div class="wrap">
-      <p class="eyebrow reveal">Processo</p>
-      <h2 class="reveal">Como encomendar sua peça</h2>
+            </article>
 
-      <div class="steps">
-        <div class="step reveal">
-          <span class="step-num">01</span>
-          <h3>Você traz a sua ideia</h3>
-          <p>Você compartilha suas necessidades, inspirações, dimensões ou paletas de cores pretendidas. Pode trazer referências visuais ou apenas a intenção do uso no dia a dia.</p>
+            <article class="timeline-item reveal">
+
+                <div class="timeline-number">05</div>
+
+                <div class="timeline-content">
+                    <h3>Esmaltação</h3>
+                    <p>
+                        Cada esmalte reage de forma diferente,
+                        tornando toda peça impossível de reproduzir.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="timeline-item reveal">
+
+                <div class="timeline-number">06</div>
+
+                <div class="timeline-content">
+                    <h3>Entrega</h3>
+                    <p>
+                        Após a segunda queima,
+                        a peça segue cuidadosamente embalada
+                        para seu novo lar.
+                    </p>
+                </div>
+
+            </article>
+
         </div>
-        <div class="step reveal">
-          <span class="step-num">02</span>
-          <h3>Nós definimos o design e eu modelo a peça</h3>
-          <p>Alinhamos os acabamentos e dou início à produção manual no ateliê. A peça toma forma passo a passo através das mãos, da secagem adequada e das queimas necessárias.</p>
-        </div>
-        <div class="step reveal">
-          <span class="step-num">03</span>
-          <h3>Você recebe uma obra única</h3>
-          <p>Sua cerâmica exclusiva é embalada de forma altamente segura e enviada direto para a sua casa. Uma obra única pronta para compor a identidade do seu espaço.</p>
-        </div>
-      </div>
+
     </div>
-  </section>
 
-  <div class="divider" aria-hidden="true"></div>
+</section>
 
-  <!-- TROCAR: substitua os 3 depoimentos de exemplo pelos reais -->
-  <section class="section depoimentos" id="depoimentos">
+<!-- ===========================================================
+DEPOIMENTOS
+=========================================================== -->
+
+<section class="section testimonials">
+
     <div class="wrap">
-      <p class="eyebrow reveal">O que dizem</p>
-      <h2 class="reveal">Quem já encomendou, aprovou</h2>
 
-      <div class="depoimentos-grid">
-        <blockquote class="depoimento reveal">
-          <span class="depoimento-stars" aria-hidden="true">★★★★★</span>
-          <p>"A peça ficou exatamente como eu imaginei, cheia de detalhes especiais. Encomendar foi super simples pelo WhatsApp."</p>
-          <cite>Camila R.</cite>
-        </blockquote>
+        <p class="eyebrow reveal">Depoimentos</p>
 
-        <blockquote class="depoimento reveal">
-          <span class="depoimento-stars" aria-hidden="true">★★★★★</span>
-          <p>"Comprei de presente pro aniversário da minha mãe e ela amou. Dá pra sentir o cuidado em cada detalhe da peça."</p>
-          <cite>Rafael T.</cite>
-        </blockquote>
+        <h2 class="reveal">
+            Histórias que continuam depois da entrega.
+        </h2>
 
-        <blockquote class="depoimento reveal">
-          <span class="depoimento-stars" aria-hidden="true">★★★★★</span>
-          <p>"Atendimento maravilhoso do início ao fim, e a peça chegou impecável, muito bem embalada. Já vou encomendar outra."</p>
-          <cite>Beatriz M.</cite>
-        </blockquote>
-      </div>
+        <div class="testimonial-grid">
+
+            <article class="testimonial reveal">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "A peça ficou ainda mais bonita do que imaginei.
+                    É impossível olhar sem perceber o carinho colocado
+                    em cada detalhe."
+                </p>
+
+                <strong>Marina — São Paulo</strong>
+
+            </article>
+
+            <article class="testimonial reveal">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "Desde o primeiro contato até a entrega,
+                    tudo foi impecável. Um trabalho realmente autoral."
+                </p>
+
+                <strong>Fernanda — Campinas</strong>
+
+            </article>
+
+            <article class="testimonial reveal">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "Virou a peça favorita da minha casa."
+                </p>
+
+                <strong>Juliana — Curitiba</strong>
+
+            </article>
+
+        </div>
+
     </div>
-  </section>
 
-  <!-- ===================== CTA FINAL ===================== -->
-  <section class="cta-final" id="contato">
-    <div class="wrap cta-inner">
-      <p class="eyebrow reveal">Contato</p>
-      <h2 class="reveal">Ideias infinitas ganham forma aqui</h2>
-      <p class="reveal">Fale diretamente comigo pelo WhatsApp para iniciarmos o desenho e planejamento da sua cerâmica sob medida.</p>
-      <a href="#" class="btn btn-fire btn-lg reveal" id="ctaFinalBtn">Faça sua Encomenda Personalizada</a>
+</section>
+
+<!-- ===========================================================
+FAQ
+=========================================================== -->
+
+<section class="section faq" id="faq">
+
+    <div class="wrap">
+
+        <p class="eyebrow reveal">Perguntas Frequentes</p>
+
+        <h2 class="reveal">
+            Tudo o que você precisa saber.
+        </h2>
+
+        <div class="faq-list">
+
+            <details class="faq-item reveal">
+
+                <summary>Cada peça é realmente única?</summary>
+
+                <p>
+                    Sim. Mesmo reproduzindo uma inspiração,
+                    esmaltes, forno e modelagem tornam
+                    cada peça exclusiva.
+                </p>
+
+            </details>
+
+            <details class="faq-item reveal">
+
+                <summary>Posso personalizar cores e tamanhos?</summary>
+
+                <p>
+                    Sim. As encomendas são desenvolvidas
+                    de forma personalizada.
+                </p>
+
+            </details>
+
+            <details class="faq-item reveal">
+
+                <summary>As peças podem ir ao micro-ondas?</summary>
+
+                <p>
+                    Dependendo do esmalte e da peça, sim.
+                    As orientações acompanham cada encomenda.
+                </p>
+
+            </details>
+
+            <details class="faq-item reveal">
+
+                <summary>Vocês enviam para todo o Brasil?</summary>
+
+                <p>
+                    Sim. Todas as peças são embaladas
+                    cuidadosamente para transporte.
+                </p>
+
+            </details>
+
+        </div>
+
     </div>
-  </section>
+
+</section>
+<!-- ===========================================================
+INSTAGRAM
+=========================================================== -->
+
+<section class="section instagram">
+
+    <div class="wrap instagram-grid">
+
+        <div>
+
+            <p class="eyebrow">Acompanhe o ateliê</p>
+
+            <h2>O processo continua no Instagram.</h2>
+
+            <p>
+                Bastidores, novas coleções, testes de esmaltes e
+                peças recém-saídas do forno.
+            </p>
+
+            <a
+                href="https://instagram.com/SEUINSTAGRAM"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-ghost">
+
+                Ver Instagram
+
+            </a>
+
+        </div>
+
+        <div class="instagram-preview">
+
+            <img
+                src="images/decoracao1.png"
+                alt="Prévia do Instagram"
+                width="700"
+                height="700"
+                loading="lazy">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================================================
+CTA FINAL
+=========================================================== -->
+
+<section class="section cta-final" id="contato">
+
+    <div class="wrap">
+
+        <h2>
+            Vamos criar uma peça que exista apenas uma vez?
+        </h2>
+
+        <p>
+            Conte sua ideia e vamos transformá-la em uma peça feita
+            especialmente para você.
+        </p>
+
+        <a id="ctaFinalBtn" class="btn btn-fire">
+            Fazer uma encomenda
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ===========================================================
+FOOTER
+=========================================================== -->
+
+<footer class="site-footer">
+
+    <div class="wrap footer-grid">
+
+        <div>
+
+            <h3>Lu Fiorentino</h3>
+
+            <p>
+                Cerâmica autoral produzida artesanalmente.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>Navegação</h4>
+
+            <a href="#historia">História</a>
+            <a href="#vitrine">Coleção</a>
+            <a href="#faq">FAQ</a>
+
+        </div>
+
+        <div>
+
+            <h4>Contato</h4>
+
+            <a id="footerWhats">WhatsApp</a>
+
+            <a
+                href="https://instagram.com/SEUINSTAGRAM"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © <span id="ano"></span>
+        Lu Fiorentino.
+        Todos os direitos reservados.
+
+    </div>
+
+</footer>
+
+<!-- ===========================================================
+ELEMENTOS FIXOS
+=========================================================== -->
+
+<button
+    id="backToTop"
+    class="back-to-top"
+    aria-label="Voltar ao topo">
+
+    ↑
+
+</button>
+
+<div
+    id="scrollProgress"
+    class="scroll-progress">
+
+</div>
+
+<a
+    id="whatsFloat"
+    class="whatsapp-float"
+    aria-label="WhatsApp">
+
+    <!-- SVG do WhatsApp -->
+
+</a>
+
+<script src="script.js"></script>
 
 </main>
 
-<section class="section-instagram reveal">
-  <div class="wrap">
-    <p class="eyebrow">Bastidores do Ateliê</p>
-    <h3>Acompanhe os processos de queima e modelagem</h3>
-    <a href="https://instagram.com/ceramica_lufiorentino" target="_blank" rel="noopener" class="link-underline">Siga @ceramica_lufiorentino no Instagram →</a>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div>
-      <p class="logo footer-logo">Lu<span>Fiorentino</span></p>
-      <p class="footer-desc">Cerâmica autoral, feita à mão, peça por peça.</p>
-    </div>
-    <div class="footer-links">
-      <a href="#historia">História</a>
-      <a href="#vitrine">Vitrine</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#" id="footerWhats">WhatsApp</a>
-      <a href="https://instagram.com/ceramica_lufiorentino" target="_blank" rel="noopener">Instagram</a>
-    </div>
-  </div>
-  <p class="footer-copy">© <span id="ano"></span> Lu Fiorentino — todos os direitos reservados.</p>
-  <!-- TROCAR: coloque seu nome/link real aqui -->
-  <p class="footer-credits">Desenvolvido por <a href="https://www.linkedin.com/in/fernando-lembo" target="_blank" rel="noopener">Fernando Lembo</a></p>
-</footer>
-
-<!-- ícone real do WhatsApp (SVG), não é mais o emoji -->
-<a href="#" class="whats-float" id="whatsFloat" aria-label="Falar no WhatsApp">
-  <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true">
-    <path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.6.7 5 1.9 7.1L3 29l6.4-2.1c2 1.1 4.3 1.7 6.6 1.7 7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3zm0 23.1c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-3.8 1.2 1.3-3.7-.3-.4a10.9 10.9 0 0 1-1.8-6c0-6 4.9-10.9 10.9-10.9 2.9 0 5.6 1.1 7.7 3.2a10.8 10.8 0 0 1 3.2 7.7c0 6-4.9 10.7-10.9 10.7z"/>
-    <path d="M21.6 18.4c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.9-1.7-2.2-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.3 4.6 3.1 1.2 3.1.8 3.7.8.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5z"/>
-  </svg>
-</a>
-
-<script src="js/script.js"></script>
 </body>
+
 </html>
