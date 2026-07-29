@@ -1385,39 +1385,4 @@ ul {
     .main-nav a.nav-cta{
         padding:.35rem .7rem;
     }
-
-    @media (max-width: 768px) {
-
-    /* 1. Altera o Hero para organizar os elementos em coluna (imagem em cima, texto embaixo) */
-    .hero {
-        display: flex;
-        flex-direction: column;
-        padding-top: 86px; /* Ajuste para não cobrir o header (altura exata do header) */
-    }
-
-    /* 2. Garante que o container da imagem ocupe 100% da largura, anulando o margin do .wrap */
-    .hero .hero-image {
-        width: 100vw; /* Largura total da janela de visualização (Viewpoint Width) */
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw; /* Anula o margin-inline:auto e as bordas do .wrap */
-        margin-right: -50vw;
-    }
-
-    /* 3. Estiliza a imagem propriamente dita */
-    .hero-image img {
-        max-width: 100% !important; /* Força a imagem a ocupar todo o container .hero-image */
-        height: auto;
-        object-fit: cover; /* Faz a imagem cobrir a área sem distorcer */
-        border-radius: 0; /* Tira as bordas arredondadas para encostar na lateral da tela */
-        box-shadow: none; /* Tira a sombra, opcional */
-    }
-
-    /* 4. Reposiciona o conteúdo de texto para dar o espaçamento correto */
-    .hero-content {
-        margin-top: var(--space-4); /* Dá um respiro após a imagem */
-    }
-
-}
 }
