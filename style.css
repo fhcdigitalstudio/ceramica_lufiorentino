@@ -583,6 +583,16 @@ ul {
     font-size: .85rem;
 }
 
+/* Dica "clique para saber mais" reposicionada no mobile (ver media query) */
+
+.piece-content .piece-more {
+    display: none;
+    margin-top: .6rem;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: .78rem;
+}
+
 /* Classe usada pelo filtro JS */
 
 .is-hidden {
@@ -623,6 +633,22 @@ ul {
     flex-direction: column;
     justify-content: center;
     padding: 3rem;
+}
+
+/* No computador, a altura do modal fica fixa para que a foto sempre
+   ocupe 100% do espaço da esquerda, independente do tamanho do texto */
+
+@media (min-width:769px){
+
+    .modal-grid{
+        height: 600px;
+    }
+
+    .modal-grid > div{
+        max-height: 600px;
+        overflow-y: auto;
+    }
+
 }
 
 .modal-grid > div h2 {
@@ -1263,12 +1289,44 @@ ul {
         gap:1rem;
     }
 
+    /* Modal: permite rolagem em vez de cortar o texto e o botão */
+    .gallery-modal{
+        max-height:88vh;
+        overflow-y:auto;
+        overflow-x:hidden;
+    }
+
     .modal-grid{
         grid-template-columns:1fr;
     }
 
     .modal-grid img{
-        max-height:350px;
+        max-height:280px;
+    }
+
+    .modal-grid > div{
+        padding:1.6rem 1.6rem 2.2rem;
+    }
+
+    #modalWhatsapp{
+        width:100%;
+    }
+
+    /* Fotos soltas (fora da coleção): menores no celular */
+    .hero-image img,
+    .historia-image img,
+    .instagram-preview img{
+        max-width:260px;
+    }
+
+    /* "Clique para saber mais": some do topo da foto e aparece
+       embaixo do nome da peça no celular */
+    .piece-hint{
+        display:none;
+    }
+
+    .piece-content .piece-more{
+        display:block;
     }
 
     .footer-grid{
@@ -1308,6 +1366,12 @@ ul {
 
     .piece img{
         height:150px;
+    }
+
+    .hero-image img,
+    .historia-image img,
+    .instagram-preview img{
+        max-width:210px;
     }
 
     .main-nav{
