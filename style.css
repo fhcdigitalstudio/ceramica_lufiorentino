@@ -5,7 +5,7 @@
 
 :root {
     /* Colors */
-    --bg: #F8F4EF;
+    --bg: #f7d4a9;
     --surface: #FFF;
     --surface-2: #EFE8DF;
 
@@ -14,10 +14,10 @@
 
     --line: #E7DED3;
 
-    --primary: #8C5A3C;
-    --primary-dark: #6F452D;
+    --primary: #7A4328;
+    --primary-dark: #5C321F;
 
-    --accent: #C29B70;
+    --accent: #B9895A;
     --success: #6A8D73;
 
     /* Fonts */
@@ -256,7 +256,7 @@ ul {
 .btn-fire {
     color: #FFF;
     background: var(--primary);
-    box-shadow: 0 10px 30px rgba(140,90,60,.25);
+    box-shadow: 0 10px 30px rgba(122,67,40,.28);
 }
 
 .btn-fire:hover {
@@ -286,7 +286,7 @@ ul {
     padding: 18px 40px;
     color: #fff;
     background: var(--accent);
-    box-shadow: 0 10px 30px rgba(194,155,112,.35);
+    box-shadow: 0 10px 30px rgba(185,137,90,.35);
 }
 
 .btn-instagram:hover {
@@ -360,6 +360,8 @@ ul {
 }
 
 .hero-image img {
+    max-width: 420px;
+    margin-inline: auto;
     border-radius: 32px;
     box-shadow: var(--shadow-lg);
 }
@@ -382,6 +384,8 @@ ul {
 
 .historia-image img,
 .instagram-preview img {
+    max-width: 420px;
+    margin-inline: auto;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     transition: var(--transition);
@@ -453,7 +457,7 @@ ul {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
     gap: 1.4rem;
     margin-top: 3rem;
 }
@@ -503,7 +507,27 @@ ul {
     box-shadow: var(--shadow-md);
 }
 
+.piece-media {
+    position: relative;
+    overflow: hidden;
+}
+
+.piece-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,0) 55%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.piece:hover .piece-media::after {
+    opacity: 1;
+}
+
 .piece img {
+    display: block;
+    width: 100%;
     height: 240px;
     object-fit: cover;
     transition: transform .8s ease;
@@ -511,6 +535,38 @@ ul {
 
 .piece:hover img {
     transform: scale(1.08);
+}
+
+.piece-hint {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+
+    padding: .4rem .85rem;
+
+    background: rgba(0,0,0,.55);
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 600;
+
+    border-radius: 999px;
+    backdrop-filter: blur(2px);
+
+    opacity: .85;
+    transform: translateY(2px);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.piece:hover .piece-hint {
+    opacity: 1;
+    transform: translateY(0);
+    background: var(--primary);
 }
 
 .piece-content {
@@ -567,6 +623,21 @@ ul {
     flex-direction: column;
     justify-content: center;
     padding: 3rem;
+}
+
+.modal-grid > div h2 {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    font: 500 clamp(1.6rem,3vw,2.2rem)/1.2 var(--font-title);
+}
+
+#modalDescription {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+#modalWhatsapp {
+    margin-top: 2rem;
 }
 
 .modal-close {
@@ -819,8 +890,8 @@ ul {
 
     background: linear-gradient(
         180deg,
-        #f4ede5,
-        #efe6dc
+        #f3e8dc,
+        #ecdcc7
     );
 }
 
@@ -882,7 +953,7 @@ ul {
 .order-form textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(140,90,60,.12);
+    box-shadow: 0 0 0 3px rgba(122,67,40,.14);
 }
 
 .order-form button {
@@ -1132,8 +1203,9 @@ ul {
         display:flex;
         flex-direction:row;
         flex-wrap:nowrap;
+        justify-content:space-between;
 
-        gap:1.4rem;
+        gap:.7rem;
 
         padding:0;
         margin:0;
@@ -1155,12 +1227,12 @@ ul {
 
     .main-nav a{
         flex:0 0 auto;
-        font-size:.85rem;
+        font-size:.78rem;
         white-space:nowrap;
     }
 
     .main-nav a.nav-cta{
-        padding:.5rem 1rem;
+        padding:.4rem .8rem;
         background:var(--primary);
         color:#fff;
         border-radius:999px;
@@ -1236,6 +1308,18 @@ ul {
 
     .piece img{
         height:150px;
+    }
+
+    .main-nav{
+        gap:.5rem;
+    }
+
+    .main-nav a{
+        font-size:.72rem;
+    }
+
+    .main-nav a.nav-cta{
+        padding:.35rem .7rem;
     }
 
 }

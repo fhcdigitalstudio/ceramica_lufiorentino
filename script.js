@@ -192,10 +192,14 @@ class Gallery {
 ========================================================== */
 
 class GalleryModal {
+    static defaultDescription =
+        "Cada peça pode servir de inspiração para uma nova criação. Cores, formatos, dimensões e acabamentos podem ser adaptados conforme sua necessidade.";
+
     constructor() {
         this.modal = Utils.$("#galleryModal");
         this.image = Utils.$("#modalImage");
         this.title = Utils.$("#modalTitle");
+        this.description = Utils.$("#modalDescription");
         this.button = Utils.$("#modalWhatsapp");
         this.closeButton = Utils.$(".modal-close");
         this.pieces = Utils.$$(".piece");
@@ -225,6 +229,7 @@ class GalleryModal {
         this.image.src = image.src;
         this.image.alt = image.alt;
         this.title.textContent = piece.dataset.name;
+        this.description.textContent = piece.dataset.desc || GalleryModal.defaultDescription;
         this.button.href = Utils.whatsappLink(
             `Olá! Vi a peça "${piece.dataset.name}" no site e gostaria de fazer uma semelhante. ✨`
         );
