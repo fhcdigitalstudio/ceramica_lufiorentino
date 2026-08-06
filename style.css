@@ -467,6 +467,32 @@ ul {
     color: var(--text-light);
 }
 
+.gallery-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    margin-top: 2rem;
+    max-width: 900px;
+}
+
+.category-card {
+    padding: 1.6rem 1.8rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+}
+
+.category-card h3 {
+    margin-bottom: .5rem;
+    font: 600 1.1rem var(--font-title);
+    color: var(--primary);
+}
+
+.category-card p {
+    color: var(--text-light);
+    font-size: .92rem;
+}
+
 .filters {
     display: flex;
     flex-wrap: wrap;
@@ -1169,12 +1195,18 @@ ul {
 
 @media (max-width:1024px){
 
-    .hero-grid,
-    .historia-grid,
-    .instagram-grid,
     .footer-grid,
     .testimonial-grid{
         grid-template-columns:1fr;
+    }
+
+    /* Foto e texto lado a lado (como no computador), em vez de empilhados */
+    .hero-grid,
+    .historia-grid,
+    .instagram-grid{
+        grid-template-columns: 1fr 1.3fr;
+        gap: 2rem;
+        align-items:center;
     }
 
     .hero{
@@ -1182,8 +1214,16 @@ ul {
         padding:8rem 0 5rem;
     }
 
-    .hero-image{
+    .hero-image,
+    .instagram-preview{
         order:-1;
+    }
+
+    .hero-image img,
+    .historia-image img,
+    .instagram-preview img{
+        max-width:100%;
+        width:100%;
     }
 
     .historia-cards{
@@ -1268,6 +1308,48 @@ ul {
         display:none;
     }
 
+    /* Em telas de celular a foto vira uma miniatura fixa ao lado do texto */
+    .hero-grid,
+    .historia-grid,
+    .instagram-grid{
+        grid-template-columns: 120px 1fr;
+        gap: 1.1rem;
+        align-items:start;
+    }
+
+    .hero-image img,
+    .historia-image img,
+    .instagram-preview img{
+        border-radius:14px;
+    }
+
+    .hero-content h1{
+        font-size: clamp(1.6rem, 7vw, 2.2rem);
+        line-height:1.1;
+        margin-bottom:1rem;
+    }
+
+    .hero-text{
+        font-size:.88rem;
+        margin-bottom:1.2rem;
+    }
+
+    .hero-highlights{
+        flex-direction:column;
+        gap:.5rem;
+        font-size:.82rem;
+    }
+
+    .historia-content h2,
+    .instagram-grid h2{
+        font-size: clamp(1.3rem, 5.5vw, 1.7rem);
+    }
+
+    .historia-content p,
+    .instagram-grid p{
+        font-size:.86rem;
+    }
+
     .hero-actions{
         flex-direction:column;
     }
@@ -1287,6 +1369,10 @@ ul {
     .gallery-grid{
         grid-template-columns:repeat(auto-fill, minmax(140px,1fr));
         gap:1rem;
+    }
+
+    .gallery-categories{
+        grid-template-columns:1fr;
     }
 
     /* Modal: permite rolagem em vez de cortar o texto e o botão */
