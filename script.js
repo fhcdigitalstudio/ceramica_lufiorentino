@@ -155,6 +155,113 @@ class ScrollProgress {
 }
 
 /* ==========================================================
+   CARROSSEL MOBILE
+========================================================== */
+
+class Carousel {
+    constructor() {
+        this.section = Utils.$(".mobile-carousel");
+        this.track = Utils.$("#carouselTrack");
+        this.dotsContainer = Utils.$("#carouselDots");
+        this.slides = this.track ? Utils.$$(".carousel-slide", this.track) : [];
+        this.dots = [];
+
+        this.index = 0;
+        this.autoplayDelay = 4000;
+        this.timer = null;
+
+        this.touchStartX = 0;
+        this.touchDeltaX = 0;
+    }
+
+    init() {
+        if (!this.section || !this.track || !this.slides.length) return;
+
+        this.buildDots();
+        this.goTo(0);
+        this.bindTouch();
+        this.startAutoplay();
+
+        // Pausa o autoplay quando o carrossel não está visível na tela
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    entry.isIntersecting ? this.startAutoplay() : this.stopAutoplay();
+                });
+            }, { threshold: 0.2 });
+
+            observer.observe(this.section);
+        }
+    }
+
+    buildDots() {
+        this.slides.forEach((_, i) => {
+            const dot = document.createElement("button");
+            dot.className = "carousel-dot";
+            dot.setAttribute("aria-label", `Ir para a foto ${i + 1}`);
+            dot.addEventListener("click", () => {
+                this.goTo(i);
+                this.restartAutoplay();
+            });
+
+            this.dotsContainer.appendChild(dot);
+            this.dots.push(dot);
+        });
+    }
+
+    goTo(index) {
+        this.index = (index + this.slides.length) % this.slides.length;
+        this.track.style.transform = `translateX(-${this.index * 100}%)`;
+
+        this.dots.forEach((dot, i) => {
+            dot.classList.toggle("is-active", i === this.index);
+        });
+    }
+
+    next() {
+        this.goTo(this.index + 1);
+    }
+
+    startAutoplay() {
+        this.stopAutoplay();
+        this.timer = setInterval(() => this.next(), this.autoplayDelay);
+    }
+
+    stopAutoplay() {
+        if (this.timer) clearInterval(this.timer);
+        this.timer = null;
+    }
+
+    restartAutoplay() {
+        if (this.timer) this.startAutoplay();
+    }
+
+    bindTouch() {
+        this.track.addEventListener("touchstart", (event) => {
+            this.touchStartX = event.touches[0].clientX;
+            this.touchDeltaX = 0;
+            this.stopAutoplay();
+        }, { passive: true });
+
+        this.track.addEventListener("touchmove", (event) => {
+            this.touchDeltaX = event.touches[0].clientX - this.touchStartX;
+        }, { passive: true });
+
+        this.track.addEventListener("touchend", () => {
+            const threshold = 40;
+
+            if (this.touchDeltaX > threshold) {
+                this.goTo(this.index - 1);
+            } else if (this.touchDeltaX < -threshold) {
+                this.goTo(this.index + 1);
+            }
+
+            this.startAutoplay();
+        });
+    }
+}
+
+/* ==========================================================
    GALERIA
 ========================================================== */
 
@@ -373,6 +480,7 @@ class App {
             new MobileMenu(),
             new Reveal(),
             this.scrollProgress,
+            new Carousel(),
             new Gallery(),
             new GalleryModal(),
             new OrderForm(),
