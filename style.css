@@ -1440,6 +1440,51 @@ ul {
         font-size: 1.2rem;
     }
 
+    /* Padroniza o tamanho dos cards brancos em todo o site no celular
+       (Processo, Depoimentos e FAQ ficam no mesmo padrão da História) */
+    .timeline-content{
+        padding: .9rem 1rem;
+        border-radius: 14px;
+    }
+
+    .timeline-content h3{
+        font-size: .95rem;
+        margin-bottom: .3rem;
+    }
+
+    .timeline-number{
+        width: 44px;
+        font-size: .85rem;
+        margin-bottom: .8rem;
+    }
+
+    .testimonial{
+        padding: .9rem .8rem;
+        border-radius: 14px;
+    }
+
+    .stars{
+        font-size: .95rem;
+        margin-bottom: .5rem;
+    }
+
+    .testimonial strong{
+        font-size: .85rem;
+    }
+
+    .faq-item{
+        padding: .9rem 1rem;
+        border-radius: 14px;
+    }
+
+    .faq-item summary{
+        font-size: .9rem;
+    }
+
+    .faq-item summary::after{
+        font-size: 1.1rem;
+    }
+
     /* Instagram: mantém a foto ao lado do texto, como uma miniatura */
     .instagram-grid{
         grid-template-columns: 90px 1fr;
