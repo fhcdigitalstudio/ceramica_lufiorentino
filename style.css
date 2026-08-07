@@ -1257,17 +1257,21 @@ ul {
         scroll-padding-top:115px;
     }
 
-    /* Carrossel de fotos: aparece só no celular, logo no topo do site */
+    /* Carrossel de fotos: aparece só no celular, logo no topo do site,
+       com espaço reservado para o menu fixo */
     .mobile-carousel{
         display:block;
         position:relative;
         width:100%;
         aspect-ratio: 4 / 3;
         overflow:hidden;
+        margin-top:9rem;
     }
 
     .carousel-track{
         display:flex;
+        flex-direction:row;
+        flex-wrap:nowrap;
         width:100%;
         height:100%;
         transition: transform .5s ease;
@@ -1313,8 +1317,13 @@ ul {
         transform:scale(1.3);
     }
 
+    /* A foto que já existia dentro do Hero some no celular — o carrossel já cobre esse papel */
+    .hero-image{
+        display:none;
+    }
+
     .hero{
-        padding-top:9rem;
+        padding-top:2.5rem;
     }
 
     .section{
