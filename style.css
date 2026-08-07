@@ -1319,6 +1319,40 @@ ul {
         grid-template-columns:1fr;
     }
 
+    /* Textos menores no celular (no padrão que ficou bom no Instagram) */
+    .section h2{
+        font-size: clamp(1.3rem, 5.5vw, 1.7rem);
+    }
+
+    .hero-content h1{
+        font-size: clamp(1.5rem, 6.5vw, 2rem);
+    }
+
+    .hero-text,
+    .section-description,
+    .gallery-description,
+    .historia-content p,
+    .timeline-content p,
+    .testimonial p,
+    .faq-item p,
+    .cta-final p,
+    .category-card p,
+    .instagram p:not(.eyebrow){
+        font-size: .9rem;
+    }
+
+    .hero-highlights{
+        font-size: .85rem;
+    }
+
+    .info-card strong{
+        font-size: 1.2rem;
+    }
+
+    .timeline-content h3{
+        font-size: 1.2rem;
+    }
+
     /* Instagram: mantém a foto ao lado do texto, como uma miniatura */
     .instagram-grid{
         grid-template-columns: 120px 1fr;
@@ -1328,14 +1362,6 @@ ul {
 
     .instagram-preview img{
         border-radius:14px;
-    }
-
-    .instagram-grid h2{
-        font-size: clamp(1.3rem, 5.5vw, 1.7rem);
-    }
-
-    .instagram-grid p{
-        font-size:.86rem;
     }
 
     .hero-actions{
