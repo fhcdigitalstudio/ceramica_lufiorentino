@@ -1257,15 +1257,15 @@ ul {
         scroll-padding-top:115px;
     }
 
-    /* Carrossel de fotos: aparece só no celular, logo no topo do site,
-       com espaço reservado para o menu fixo */
+    /* Carrossel de fotos: aparece só no celular, colado no topo da tela —
+       o menu fixo flutua por cima, translúcido */
     .mobile-carousel{
         display:block;
         position:relative;
         width:100%;
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 3 / 4;
         overflow:hidden;
-        margin-top:9rem;
+        margin-top:0;
     }
 
     .carousel-track{
@@ -1317,8 +1317,10 @@ ul {
         transform:scale(1.3);
     }
 
-    /* A foto que já existia dentro do Hero some no celular — o carrossel já cobre esse papel */
-    .hero-image{
+    /* Fotos que já existiam soltas pelo site (Hero e História) somem no celular —
+       o carrossel no topo já cobre esse papel visual */
+    .hero-image,
+    .historia-image{
         display:none;
     }
 
@@ -1420,8 +1422,18 @@ ul {
         font-size: .85rem;
     }
 
+    .info-card{
+        padding: .9rem .8rem;
+        border-radius: 14px;
+    }
+
     .info-card strong{
-        font-size: 1.2rem;
+        font-size: .95rem;
+        margin-bottom: .2rem;
+    }
+
+    .info-card span{
+        font-size: .8rem;
     }
 
     .timeline-content h3{
@@ -1490,19 +1502,6 @@ ul {
     #modalWhatsapp{
         width:100%;
     }
-
-    /* Fotos soltas (fora da coleção): reduzidas no celular */
-.hero-image,
-.historia-image {
-    width: 100%;
-}
-
-.hero-image img,
-.historia-image img {
-    width: 100%;
-    max-width: 280px;
-    margin-inline: auto;
-}
 
     /* "Clique para saber mais": some do topo da foto e aparece
        embaixo do nome da peça no celular */
