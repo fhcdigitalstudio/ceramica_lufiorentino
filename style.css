@@ -1200,9 +1200,13 @@ ul {
         grid-template-columns:1fr;
     }
 
-    /* Foto e texto lado a lado (como no computador), em vez de empilhados */
+    /* Hero e História: imagem em cima, texto embaixo (mais espaço para o texto) */
     .hero-grid,
-    .historia-grid,
+    .historia-grid{
+        grid-template-columns:1fr;
+    }
+
+    /* Instagram: imagem ao lado do texto (como no computador) */
     .instagram-grid{
         grid-template-columns: 1fr 1.3fr;
         gap: 2rem;
@@ -1214,13 +1218,14 @@ ul {
         padding:8rem 0 5rem;
     }
 
-    .hero-image,
+    .hero-image{
+        order:-1;
+    }
+
     .instagram-preview{
         order:-1;
     }
 
-    .hero-image img,
-    .historia-image img,
     .instagram-preview img{
         max-width:100%;
         width:100%;
@@ -1308,44 +1313,27 @@ ul {
         display:none;
     }
 
-    /* Em telas de celular a foto vira uma miniatura fixa ao lado do texto */
+    /* Hero e História ficam empilhados no celular (imagem em cima, texto embaixo) */
     .hero-grid,
-    .historia-grid,
+    .historia-grid{
+        grid-template-columns:1fr;
+    }
+
+    /* Instagram: mantém a foto ao lado do texto, como uma miniatura */
     .instagram-grid{
         grid-template-columns: 120px 1fr;
         gap: 1.1rem;
         align-items:start;
     }
 
-    .hero-image img,
-    .historia-image img,
     .instagram-preview img{
         border-radius:14px;
     }
 
-    .hero-content h1{
-        font-size: clamp(1.6rem, 7vw, 2.2rem);
-        line-height:1.1;
-        margin-bottom:1rem;
-    }
-
-    .hero-text{
-        font-size:.88rem;
-        margin-bottom:1.2rem;
-    }
-
-    .hero-highlights{
-        flex-direction:column;
-        gap:.5rem;
-        font-size:.82rem;
-    }
-
-    .historia-content h2,
     .instagram-grid h2{
         font-size: clamp(1.3rem, 5.5vw, 1.7rem);
     }
 
-    .historia-content p,
     .instagram-grid p{
         font-size:.86rem;
     }
